@@ -12,3 +12,49 @@
 git clone https://github.com/ismailaj80/sustainability.git
 cd sustainability
 git checkout -b feature-اسمك-والمهمة
+
+مثال للطالب حمزة:
+git checkout -b feature-hamza-level2
+
+مثال للطالب عمر:
+git checkout -b feature-omar-tips
+
+
+خطوات الرفع على github 
+git add .
+git commit -m "شرح ما تم تعديله"
+git push origin feature-اسمك-والمهمة
+
+مثال:
+git commit -m "إضافة صفحة المستوى الثاني للفئة 7-14"
+git push origin feature-hamza-level2
+
+/****************************/
+5. إرسال التعديل للمراجعة (Pull Request)
+افتح المشروع من متصفحك على GitHub.
+
+ستظهر لك رسالة:
+
+Compare & pull request
+
+اضغط عليها.
+
+أضف وصفًا واضحًا لما قمت به.
+
+اضغط:
+
+Create pull request
+
+بعدها سيقوم المشرف بمراجعة التعديل والموافقة عليه أو إعادته لك لتعديله.
+
+
+6. تحديث مشروعك قبل بدء أي مهمة جديدة
+إذا مر وقت على تحميل المشروع، تأكد أنك تملك آخر نسخة قبل العمل:
+
+bash
+نسخ
+تحرير
+git checkout master
+git pull origin master
+git checkout feature-اسمك
+
