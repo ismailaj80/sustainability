@@ -64,3 +64,4 @@ git shortlog -sne
 ✅ 3. حفظ سجل التعديلات مع اسماء الاشخاص اللي عدلو على المشروع في ملف نصي:
 git log --pretty=format:"%ad | %an | %s" --date=short > commit-log.txt
 
+تجربة رفع الشغل من حساب الطالب
