@@ -51,10 +51,16 @@ Create pull request
 6. تحديث مشروعك قبل بدء أي مهمة جديدة
 إذا مر وقت على تحميل المشروع، تأكد أنك تملك آخر نسخة قبل العمل:
 
-bash
-نسخ
-تحرير
+
 git checkout master
 git pull origin master
 git checkout feature-اسمك
+
+✅ 1. عرض قائمة بجميع من ساهموا في المشروع:
+
+git shortlog -sne
+
+
+✅ 3. حفظ سجل التعديلات مع اسماء الاشخاص اللي عدلو على المشروع في ملف نصي:
+git log --pretty=format:"%ad | %an | %s" --date=short > commit-log.txt
 
