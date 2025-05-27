@@ -19,9 +19,9 @@ class _Level1_7to14State extends State<Level1_7to14> {
   final List<Map<String, dynamic>> questions = [
     {
       'images': [
-        'assets/images/q1_bad1.jpg',
-        'assets/images/q1_bad2.jpg',
-        'assets/images/q1_good.jpg',
+        'assets/images/assets/images/throwing trash on beach4.jpg',
+        'assets/images/assets/images/throwing trash on beach1.jpeg',
+        'assets/images/collect.jpg',
       ],
       'correctIndex': 2,
     },
@@ -143,27 +143,27 @@ class _Level1_7to14State extends State<Level1_7to14> {
               const SizedBox(height: 30),
               passed
                   ? ElevatedButton.icon(
-                      icon: const Icon(Icons.arrow_forward),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/level2_7to14');
-                      },
-                      label: const Text('انتقل إلى المستوى الثاني'),
-                    )
+                    icon: const Icon(Icons.arrow_forward),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/level2_7to14');
+                    },
+                    label: const Text('انتقل إلى المستوى الثاني'),
+                  )
                   : Column(
-                      children: [
-                        ElevatedButton(
-                          onPressed: resetQuiz,
-                          child: const Text('إعادة المحاولة'),
-                        ),
-                        const SizedBox(height: 10),
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/tips');
-                          },
-                          child: const Text('ارشادات وتعليمات'),
-                        ),
-                      ],
-                    ),
+                    children: [
+                      ElevatedButton(
+                        onPressed: resetQuiz,
+                        child: const Text('إعادة المحاولة'),
+                      ),
+                      const SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/tips');
+                        },
+                        child: const Text('ارشادات وتعليمات'),
+                      ),
+                    ],
+                  ),
             ],
           ),
         ),
@@ -179,10 +179,7 @@ class _Level1_7to14State extends State<Level1_7to14> {
           children: [
             Text(
               'السؤال ${currentQuestion + 1} من ${questions.length}',
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
             Expanded(

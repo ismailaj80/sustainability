@@ -49,7 +49,7 @@ class AppScaffold extends StatelessWidget {
                 Navigator.pop(context);
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const AboutUs()),
+                  MaterialPageRoute(builder: (context) => const AboutUsPage()),
                 );
               },
             ),

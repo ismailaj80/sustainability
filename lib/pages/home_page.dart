@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 import '../pages/beach_vision_page.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -40,12 +39,12 @@ class _HomePageState extends State<HomePage> {
                 Navigator.pop(context); // لإغلاق الـ Drawer
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const BeachVisionPage()),
+                  MaterialPageRoute(
+                    builder: (context) => const BeachVisionPage(),
+                  ),
                 );
               },
             ),
-
-
 
             ListTile(
               title: const Text('من نحن'),
@@ -57,9 +56,7 @@ class _HomePageState extends State<HomePage> {
       body: Stack(
         children: [
           // الخلفية الزرقاء
-          Container(
-            color: const Color(0xFFE0F7FA),
-          ),
+          Container(color: const Color(0xFFE0F7FA)),
 
           // صورة الشعاب المرجانية
           Container(
@@ -87,7 +84,11 @@ class _HomePageState extends State<HomePage> {
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 243, 67, 67),
                       shadows: [
-                        Shadow(offset: Offset(1, 1), blurRadius: 2, color: Colors.black),
+                        Shadow(
+                          offset: Offset(1, 1),
+                          blurRadius: 2,
+                          color: Colors.black,
+                        ),
                       ],
                     ),
                   ),
@@ -99,7 +100,8 @@ class _HomePageState extends State<HomePage> {
                     child: InkWell(
                       onTap: () async {
                         await player.play(AssetSource('audio/click.mp3'));
-                        Navigator.pushNamed(context, '/level1_7to14');
+                        // ignore: use_build_context_synchronously
+                        Navigator.pushNamed(context, '/instruction');
                       },
                       borderRadius: BorderRadius.circular(16),
                       splashColor: Colors.tealAccent,
@@ -135,7 +137,8 @@ class _HomePageState extends State<HomePage> {
                     child: InkWell(
                       onTap: () async {
                         await player.play(AssetSource('audio/click.mp3'));
-                        Navigator.pushNamed(context, '/level1_14plus');
+                        // ignore: use_build_context_synchronously
+                        Navigator.pushNamed(context, '/videoomar');
                       },
                       borderRadius: BorderRadius.circular(16),
                       splashColor: Colors.tealAccent,
