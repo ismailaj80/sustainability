@@ -18,44 +18,31 @@ class _Level2_7to14State extends State<Level2_7to14> {
 
   final List<Map<String, dynamic>> questions = [
     {
+      'question': 'ما هو التصرف الصحيح على الشاطئ؟',
       'images': [
         'assets/images/blue1.jpg',
         'assets/images/blue2.jpg',
-        'assets/images/collect.jpg',
-      ],
-      'correctIndex': 2,
-    },
-    {
-      'images': [
-        'assets/images/q2_bad1.jpg',
-        'assets/images/q2_good.jpg',
-        'assets/images/q2_bad2.jpg',
+        'assets/images/blue3.jpg',
       ],
       'correctIndex': 1,
     },
     {
+      'question': 'أي من هذه الصور تعبر عن السلوك الجيد؟',
       'images': [
-        'assets/images/q3_good.jpg',
-        'assets/images/q3_bad1.jpg',
-        'assets/images/q3_bad2.jpg',
+        'assets/images/sea.jpg',
+        'assets/images/good1.jpeg',
+        'assets/images/seaa.jpeg',
+      ],
+      'correctIndex': 1,
+    },
+    {
+      'question': 'ما هو السلوك الجيد في هذه الحالة؟',
+      'images': [
+        'assets/images/q3_good.jpeg',
+        'assets/images/q2_bad.jpeg',
+        'assets/images/q1_bad.jpeg',
       ],
       'correctIndex': 0,
-    },
-    {
-      'images': [
-        'assets/images/q4_bad1.jpg',
-        'assets/images/q4_bad2.jpg',
-        'assets/images/q4_good.jpg',
-      ],
-      'correctIndex': 2,
-    },
-    {
-      'images': [
-        'assets/images/q5_bad1.jpg',
-        'assets/images/q5_good.jpg',
-        'assets/images/q5_bad2.jpg',
-      ],
-      'correctIndex': 1,
     },
   ];
 

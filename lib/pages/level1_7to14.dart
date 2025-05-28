@@ -18,6 +18,7 @@ class _Level1_7to14State extends State<Level1_7to14> {
 
   final List<Map<String, dynamic>> questions = [
     {
+      'question': 'ما هو التصرف الصحيح على الشاطئ؟',
       'images': [
         'assets/images/throwing trash on beach4.jpg',
         'assets/images/throwing trash on beach1.jpeg',
@@ -26,18 +27,20 @@ class _Level1_7to14State extends State<Level1_7to14> {
       'correctIndex': 2,
     },
     {
+      'question': 'ما هو السلوك البيئي المناسب؟',
       'images': [
         'assets/images/suss1.jpg',
         'assets/images/suss2.jpg',
         'assets/images/suss3.jpg',
       ],
-      'correctIndex': 1,
+      'correctIndex': 0,
     },
     {
+      'question': 'أي صورة تعبر عن السلوك الجيد؟',
       'images': [
-        'assets/images/q3_good.jpg',
-        'assets/images/q3_bad1.jpg',
-        'assets/images/q3_bad2.jpg',
+        'assets/images/good1.jpeg',
+        'assets/images/bad1.jpeg',
+        'assets/images/bad2.jpeg',
       ],
       'correctIndex': 0,
     },
@@ -93,8 +96,9 @@ class _Level1_7to14State extends State<Level1_7to14> {
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            textDirection: TextDirection.rtl,
             children: [
-              // صورة متحركة GIF عند النجاح أو الفشل
               Image.asset(
                 passed ? 'assets/images/success.gif' : 'assets/images/fail.gif',
                 width: 150,
@@ -111,7 +115,7 @@ class _Level1_7to14State extends State<Level1_7to14> {
                   fontWeight: FontWeight.bold,
                   color: Colors.black87,
                 ),
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.right,
               ),
               const SizedBox(height: 16),
               Text(
@@ -121,6 +125,7 @@ class _Level1_7to14State extends State<Level1_7to14> {
                   fontWeight: FontWeight.w500,
                   color: Colors.teal,
                 ),
+                textAlign: TextAlign.right,
               ),
               const SizedBox(height: 30),
               passed
@@ -142,7 +147,7 @@ class _Level1_7to14State extends State<Level1_7to14> {
                         onPressed: () {
                           Navigator.pushNamed(context, '/tips');
                         },
-                        child: const Text('ارشادات وتعليمات'),
+                        child: const Text('إرشادات وتعليمات'),
                       ),
                     ],
                   ),
@@ -152,16 +157,35 @@ class _Level1_7to14State extends State<Level1_7to14> {
       );
     }
 
-    // شاشة الأسئلة
     return AppScaffold(
       title: 'المستوى الأول - من 7 إلى 14 سنة',
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          textDirection: TextDirection.rtl,
           children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
             Text(
               'السؤال ${currentQuestion + 1} من ${questions.length}',
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.right,
+            ),
+            const SizedBox(height: 12),
+            Text(
+              questions[currentQuestion]['question'],
+              style: const TextStyle(fontSize: 18),
+              textAlign: TextAlign.right,
             ),
             const SizedBox(height: 20),
             Expanded(
