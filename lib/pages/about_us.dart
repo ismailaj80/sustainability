@@ -81,8 +81,7 @@ class _AboutUsPageState extends State<AboutUsPage>
                     sectionTitle('فريق تكنولوجيا المعلومات (BTEC):'),
                     bullet('حمزة الكردي'),
                     bullet('عمر حاوي'),
-                    bullet('عبد الرحمن العطيات'),
-                    bullet('المقداد أبو شتال'),
+
                     SizedBox(height: 24),
                     sectionTitle('إشراف:'),
                     Text(

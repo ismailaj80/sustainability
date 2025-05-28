@@ -29,6 +29,16 @@ class _InstructionVideoPageState extends State<InstructionVideoPage> {
     super.dispose();
   }
 
+  void togglePlayPause() {
+    setState(() {
+      if (_controller.value.isPlaying) {
+        _controller.pause();
+      } else {
+        _controller.play();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +56,25 @@ class _InstructionVideoPageState extends State<InstructionVideoPage> {
                   child: VideoPlayer(_controller),
                 )
                 : const CircularProgressIndicator(),
-            const SizedBox(height: 30),
+            const SizedBox(height: 20),
+            ElevatedButton.icon(
+              icon: Icon(
+                _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+              ),
+              label: Text(
+                _controller.value.isPlaying ? 'إيقاف الفيديو' : 'تشغيل الفيديو',
+              ),
+              onPressed: togglePlayPause,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 12,
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
             ElevatedButton.icon(
               icon: const Icon(Icons.play_arrow),
               label: const Text('الانتقال إلى المستوى الأول'),
@@ -55,6 +83,7 @@ class _InstructionVideoPageState extends State<InstructionVideoPage> {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 24,
                   vertical: 12,

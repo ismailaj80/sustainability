@@ -142,17 +142,27 @@ class _Level2_7to14State extends State<Level2_7to14> {
               const SizedBox(height: 30),
               passed
                   ? ElevatedButton.icon(
-                    icon: const Icon(Icons.arrow_forward),
+                    icon: const Icon(Icons.arrow_forward, color: Colors.white),
                     onPressed: () {
                       Navigator.pushNamed(context, '/level3_7to14');
                     },
                     label: const Text('الانتقال إلى المستوى الثالث'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.teal,
+                      foregroundColor: Colors.white,
+                      textStyle: const TextStyle(fontSize: 18),
+                    ),
                   )
                   : Column(
                     children: [
                       ElevatedButton(
                         onPressed: resetQuiz,
                         child: const Text('إعادة المحاولة'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.teal,
+                          foregroundColor: Colors.white,
+                          textStyle: const TextStyle(fontSize: 18),
+                        ),
                       ),
                       const SizedBox(height: 10),
                       ElevatedButton(
@@ -160,6 +170,11 @@ class _Level2_7to14State extends State<Level2_7to14> {
                           Navigator.pushNamed(context, '/tips');
                         },
                         child: const Text('ارشادات وتعليمات'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.teal,
+                          foregroundColor: Colors.white,
+                          textStyle: const TextStyle(fontSize: 18),
+                        ),
                       ),
                     ],
                   ),
@@ -208,3 +223,4 @@ class _Level2_7to14State extends State<Level2_7to14> {
     );
   }
 }
+// This code defines a quiz app for children aged 7 to 14, where they answer questions by selecting images.

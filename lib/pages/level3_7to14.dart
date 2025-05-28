@@ -23,7 +23,7 @@ class _Level3_7to14State extends State<Level3_7to14> {
         'assets/images/q1_bad2.jpg',
         'assets/images/q1_good.jpg',
       ],
-      'correctIndex': 3,
+      'correctIndex': 2, 
     },
     {
       'images': [
@@ -40,22 +40,6 @@ class _Level3_7to14State extends State<Level3_7to14> {
         'assets/images/q3_bad2.jpg',
       ],
       'correctIndex': 0,
-    },
-    {
-      'images': [
-        'assets/images/q4_bad1.jpg',
-        'assets/images/q4_bad2.jpg',
-        'assets/images/q4_good.jpg',
-      ],
-      'correctIndex': 2,
-    },
-    {
-      'images': [
-        'assets/images/q5_bad1.jpg',
-        'assets/images/q5_good.jpg',
-        'assets/images/q5_bad2.jpg',
-      ],
-      'correctIndex': 1,
     },
   ];
 
@@ -111,8 +95,7 @@ class _Level3_7to14State extends State<Level3_7to14> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                passed ? 'assets/images/000.gif'
-                 : 'assets/images/fail.gif',
+                passed ? 'assets/images/000.gif' : 'assets/images/fail.gif',
                 width: 150,
                 height: 150,
                 fit: BoxFit.contain,
@@ -140,26 +123,32 @@ class _Level3_7to14State extends State<Level3_7to14> {
               ),
               const SizedBox(height: 30),
               passed
-                  ? Column(
-                    children: [
-                      ElevatedButton.icon(
-                        icon: const Icon(Icons.home),
-                        onPressed: () {
-                          Navigator.pushNamedAndRemoveUntil(
-                            context,
-                            '/',
-                            (route) => false,
-                          );
-                        },
-                        label: const Text('العودة إلى الصفحة الرئيسية'),
-                      ),
-                    ],
+                  ? ElevatedButton.icon(
+                    icon: const Icon(Icons.home, color: Colors.white),
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        '/',
+                        (route) => false,
+                      );
+                    },
+                    label: const Text('العودة إلى الصفحة الرئيسية'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.teal,
+                      foregroundColor: Colors.white,
+                      textStyle: const TextStyle(fontSize: 18),
+                    ),
                   )
                   : Column(
                     children: [
                       ElevatedButton(
                         onPressed: resetQuiz,
                         child: const Text('إعادة المحاولة'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.teal,
+                          foregroundColor: Colors.white,
+                          textStyle: const TextStyle(fontSize: 18),
+                        ),
                       ),
                       const SizedBox(height: 10),
                       ElevatedButton(
@@ -167,6 +156,11 @@ class _Level3_7to14State extends State<Level3_7to14> {
                           Navigator.pushNamed(context, '/tips');
                         },
                         child: const Text('ارشادات وتعليمات'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.teal,
+                          foregroundColor: Colors.white,
+                          textStyle: const TextStyle(fontSize: 18),
+                        ),
                       ),
                     ],
                   ),

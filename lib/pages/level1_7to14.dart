@@ -19,8 +19,8 @@ class _Level1_7to14State extends State<Level1_7to14> {
   final List<Map<String, dynamic>> questions = [
     {
       'images': [
-        'assets/images/assets/images/throwing trash on beach4.jpg',
-        'assets/images/assets/images/throwing trash on beach1.jpeg',
+        'assets/images/throwing trash on beach4.jpg',
+        'assets/images/throwing trash on beach1.jpeg',
         'assets/images/collect.jpg',
       ],
       'correctIndex': 2,
@@ -41,22 +41,7 @@ class _Level1_7to14State extends State<Level1_7to14> {
       ],
       'correctIndex': 0,
     },
-    {
-      'images': [
-        'assets/images/q4_bad1.jpg',
-        'assets/images/q4_bad2.jpg',
-        'assets/images/q4_good.jpg',
-      ],
-      'correctIndex': 2,
-    },
-    {
-      'images': [
-        'assets/images/q5_bad1.jpg',
-        'assets/images/q5_good.jpg',
-        'assets/images/q5_bad2.jpg',
-      ],
-      'correctIndex': 1,
-    },
+
   ];
 
   void checkAnswer(int selectedIndex) {
@@ -112,9 +97,7 @@ class _Level1_7to14State extends State<Level1_7to14> {
             children: [
               // صورة متحركة GIF عند النجاح أو الفشل
               Image.asset(
-                passed
-                    ? 'assets/images/success.gif'
-                    : 'assets/images/failure.gif',
+                passed ? 'assets/images/success.gif' : 'assets/images/fail.gif',
                 width: 150,
                 height: 150,
                 fit: BoxFit.contain,
