@@ -19,8 +19,8 @@ class _Level2_7to14State extends State<Level2_7to14> {
   final List<Map<String, dynamic>> questions = [
     {
       'images': [
-        'assets/images/assets/images/throwing trash on beach4.jpg',
-        'assets/images/assets/images/throwing trash on beach1.jpeg',
+        'assets/images/blue1.jpg',
+        'assets/images/blue2.jpg',
         'assets/images/collect.jpg',
       ],
       'correctIndex': 2,

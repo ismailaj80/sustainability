@@ -27,9 +27,9 @@ class _Level1_7to14State extends State<Level1_7to14> {
     },
     {
       'images': [
-        'assets/images/q2_bad1.jpg',
-        'assets/images/q2_good.jpg',
-        'assets/images/q2_bad2.jpg',
+        'assets/images/suss1.jpg',
+        'assets/images/suss2.jpg',
+        'assets/images/suss3.jpg',
       ],
       'correctIndex': 1,
     },
@@ -41,7 +41,6 @@ class _Level1_7to14State extends State<Level1_7to14> {
       ],
       'correctIndex': 0,
     },
-
   ];
 
   void checkAnswer(int selectedIndex) {
